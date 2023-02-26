@@ -7,27 +7,25 @@ import tempfile
 import base64
 import requests
 
-IMAGE_FOLDER = "path/to/image/folder"
+IMAGE_FOLDER = "J:/thuy_blender/Blender-ControlNet/tmp"
 
 DEFAULT_PARAMS = {
-    "prompt": "1 girl dancing on the beach, ocean background, sunset glow, best quality",
-    "negative_prompt": "worst quality, low quality, lowres, normal quality",
+    "prompt": "1 girl, blue hair, long jean pan, white shirt, library",
+    "negative_prompt": "(worst quality, low quality:1.2, tshirt, black shirt, short pan, hat, skirt),",
     "width": 512,
     "height": 512,
-    "seed": -1,
-    "subseed": -1,
-    "subseed_strength": 0,
+    "seed": 1129760662,
     "batch_size": 1,
     "n_iter": 1,
-    "steps": 20,
-    "cfg_scale": 7,
-    "restore_faces": False,
+    "steps": 30,
+    "cfg_scale": 13,
+    "restore_faces": True,
     "sampler_index": "DPM++ 2M Karras",
-    "controlnet_module": "depth",
-    "controlnet_model": "diff_control_sd15_depth_fp16 [978ef0a1]",
-    "controlnet_guidance": 1.0,
+    "controlnet_module": "none",
+    "controlnet_model": "control_any3_openpose [95070f75]",
+    "controlnet_weight": 1.0,
     "enable_hr": False,
-    "denoising_strength": 0.5,
+    "denoising_strength": 0.7,
     "hr_scale": 2,
     "hr_upscale": "Latent (bicubic antialiased)",
 }
